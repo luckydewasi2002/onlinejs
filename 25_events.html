@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+    <style>
+        ul li img{
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>amazing images</h1>
+    <ul id="image">
+        <li id="dog "><img src="https://cdn.pixabay.com/photo/2018/08/27/21/16/pet-3635986_960_720.jpg" alt=""></li>
+        <li id="cat"><img src="https://p1.pxfuel.com/preview/667/127/593/cat-baby-kitten-cat-domestic-cat-baby-cat-pet-royalty-free-thumbnail.jpg" alt=""></li>
+        <li id="parrot"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPKh4ZT-oHjJbpK2lkuvXCjaeYivXzXaat-g&s" alt=""></li>
+        <li id="rat"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTD1XRna2iZdJMUKbEdskcgUyDVF831P7KSQ&s" alt=""></li>
+    </ul>
+
+    <script>
+        // document.getElementById("cat").onclick = function(){
+        //     alert("cat clicked")
+        // }
+
+        // document.getElementById("cat").addEventListener('click',function(){
+        //     alert("cat again clicked")
+        // })
+
+        // document.getElementById("cat").addEventListener("click",function(e) {
+        //     console.log(e);
+        // },false)
+
+        //type, timestamp, defaultPrevented
+        //target, toElement,currentTareget,
+        //clintX ,clintY, screenX, screenY
+        //altkey, ctrlkey, shiftkey, keyCode
+
+    //  document.getElementById("image").addEventListener("click",function(e){
+    //     console.log("clicked inside the ul")
+    //  },false)
+
+     
+    //  document.getElementById("cat").addEventListener("click",function(e){
+    //     console.log("clicked cat")
+    //  },false)
+     //ager true krenge to pehle ul vala print hoga or bad me cat vala
+    //  document.getElementById("cat").addEventListener("click",function(e){
+    //     console.log("clicked cat")
+    //  },true)
+
+document.querySelector("#image").addEventListener("click", function(e){
+    console.log(e.target.parentNode);
+   if(e.terget.tagNmae === 'IMG'){
+    let removeIt = e.target.parentNode
+    removeIt.remove()
+   }
+})
+
+    </script>
+</body>
+</html>

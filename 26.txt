@@ -1,0 +1,14 @@
+javascript ->
+             syncronous
+             single threaded
+
+execution context =>
+                   execute one line of code at a time
+                   console log-(1)
+                   consolelog -(2)
+
+                   call stack      memory heap  
+
+          blocking code           non-blocking code
+    block the flow of code      does not block execution
+          read file sync           read file  async                       
