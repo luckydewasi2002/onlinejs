@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call back</title>
+</head>
+<body>
+    <script>
+    //     console.log("one")
+    //     console.log("two")
+    //     console.log("three")
+    //     setTimeout(()=>{
+    //     console.log("hello");
+    // },4000)
+    // console.log("four")
+    // console.log("five")
+
+//call back function
+
+function sum(a,b){
+    console.log(a+b)
+}
+function calculator(a,b,sum){
+    sum(a,b)
+}
+calculator(1,2,sum)
+
+
+//callback hell
+
+function getData(dataid,getnextdata){
+    setTimeout(()=>{
+   console.log("data",dataid)
+   if(getnextdata){
+    getnextdata();
+   }
+},2000)
+}
+    getData(1,()=>{
+        getData(2,()=>{
+            getData(3)
+        })
+    })
+
+
+
+    </script>
+</body>
+</html>
+
+   
